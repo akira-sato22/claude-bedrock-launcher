@@ -21,7 +21,7 @@ AWS Bedrock 経由で Claude Code を起動するためのランチャースク�
 
 ```bash
 # リポジトリをクローン
-git clone https://github.com/<your-username>/claude-shell.git
+git clone https://github.com/akira-sato22/claude-shell.git
 cd claude-shell
 
 # スクリプトに実行権限を付与
@@ -65,17 +65,15 @@ chmod +x claude-launcher.sh
 
 スクリプトは以下の環境変数を設定して Claude を起動します。
 
-| 変数名 | 値 | 説明 |
-|--------|----|------|
-| `AWS_PROFILE` | 選択したプロファイル名 | AWS SDK が使用するプロファイル |
-| `AWS_REGION` | 実行時に選択した値 | Bedrock のリージョン |
-| `CLAUDE_CODE_USE_BEDROCK` | `1` | Bedrock モードの有効化 |
-| `ANTHROPIC_DEFAULT_OPUS_MODEL` | `us.anthropic.claude-opus-4-6-v1` | Opus モデル ID |
-| `ANTHROPIC_DEFAULT_SONNET_MODEL` | `us.anthropic.claude-sonnet-4-6` | Sonnet モデル ID |
-| `ANTHROPIC_DEFAULT_HAIKU_MODEL` | `us.anthropic.claude-haiku-4-5-20251001-v1:0` | Haiku モデル ID |
+| 変数名                           | 値                                            | 説明                           |
+| -------------------------------- | --------------------------------------------- | ------------------------------ |
+| `AWS_PROFILE`                    | 選択したプロファイル名                        | AWS SDK が使用するプロファイル |
+| `AWS_REGION`                     | 実行時に選択した値                            | Bedrock のリージョン           |
+| `CLAUDE_CODE_USE_BEDROCK`        | `1`                                           | Bedrock モードの有効化         |
+| `ANTHROPIC_DEFAULT_OPUS_MODEL`   | `us.anthropic.claude-opus-4-6-v1`             | Opus モデル ID                 |
+| `ANTHROPIC_DEFAULT_SONNET_MODEL` | `us.anthropic.claude-sonnet-4-6`              | Sonnet モデル ID               |
+| `ANTHROPIC_DEFAULT_HAIKU_MODEL`  | `us.anthropic.claude-haiku-4-5-20251001-v1:0` | Haiku モデル ID                |
 
-> **Note**: `AWS_REGION` はスクリプト内に `us-east-1` として固定されています。
-> 別のリージョンを使用する場合は、スクリプト内の該当行を編集してください。
 
 ## `~/.aws/config` の設定例
 
